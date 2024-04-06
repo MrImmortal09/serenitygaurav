@@ -2,9 +2,12 @@ import { useContract, useNFTs, ThirdwebNftMedia } from "@thirdweb-dev/react";
 import styles from '../styles/Marketplace.module.css';
 import { useEffect, useRef, useState } from 'react';
 import Link from "next/link";
-import Skeleton from '../components/Skeleton/Skeleton';
+import Skeleton from "./Skeleton/Skeleton";
+
+
 
 export default function CompanyCollection({ company }) {
+    
     const { contract } = useContract(company?.address);
     const [metadata, setMetadata] = useState(null);
     useEffect(() => {
@@ -52,3 +55,5 @@ export default function CompanyCollection({ company }) {
 
     );
 }
+
+
