@@ -1,6 +1,6 @@
 # Project Serenity Overview
 
-[Project Serenity](https://projectserenity.com) is a revolutionary decentralized stock exchange with a global reach, poised to redefine digital asset trading. Prioritizing security, transparency, and user autonomy, Serenity provides a platform for peer-to-peer trading without the involvement of intermediaries, leveraging smart contracts for seamless transactions.
+SERENITY is a revolutionary decentralized stock exchange with a global reach, poised to redefine digital asset trading. Prioritizing security, transparency, and user autonomy, Serenity provides a platform for peer-to-peer trading without the involvement of intermediaries, leveraging smart contracts for seamless transactions.
 
 ### Key Features:
 1. **Decentralization:** Serenity operates autonomously without the influence of centralized authorities or regulatory bodies, empowering users to control their assets and trades.
@@ -45,13 +45,13 @@ npm run dev
 ```
 
 ### Support:
-For inquiries or assistance regarding Project Serenity, please contact our support team at [support@projectserenity.com](mailto:support@projectserenity.com).
+For inquiries or assistance regarding Project Serenity, please contact our support team at [support@projectserenity.com](rishyym0927@gmail.com)
 
 ### License:
-Project Serenity is licensed under the [MIT License](link-to-license). Users are encouraged to use, modify, and distribute the software in accordance with the terms of the license.
+Project Serenity is licensed under the MIT-License . Users are encouraged to use, modify, and distribute the software in accordance with the terms of the license.
 
 ### Connect with Us:
-Stay updated with the latest news and developments by following us on [Twitter](link-to-twitter), [Telegram](link-to-telegram), and [Medium](link-to-medium).
+Stay updated with the latest news and developments by following us on [Github](github.com)
 
 Thank you for choosing Project Serenity!
 
