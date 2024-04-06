@@ -8,7 +8,8 @@ import CompanyCollection from  "../components/campanyCollectionsIPO" ;// '../com
   const Ipo=()=> {
     return (
         <div className={styles.marketplace} >
-            <div  className={styles.title}>Ipo</div>
+            <div  className={styles.title} style={{margin:"15px" , fontWeight:"bold"}}>IPO - Initial Public Offerings</div>
+            
             <div className={styles.companyContainer} >
                 {NFT_COLLECTION_ADDRESSS.map((company, i) =>
                     <CompanyCollection company={company} key={i} />
