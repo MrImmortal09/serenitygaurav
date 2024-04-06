@@ -75,7 +75,51 @@ export default function TokenPage({ nft, contractMetadata }) {
 
   return (
     <>
-      <div
+      {metadata &&
+        <div className={styles.TokenPage} >
+          <Toaster position="bottom-center" reverseOrder={false} />
+          <div className={styles.outer}>
+            <div className={styles.left}>
+              <div className={styles.Chart}>
+                <ThirdwebNftMedia
+                  metadata={metadata}
+                  height={"18vw"}
+                  width={"18vw"}
+                />
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.name}>{!isLoading && contractMetadata && (contractMetadata?.name)}</div>
+              <div className={styles.des}>{!isLoading && contractMetadata && (contractMetadata?.description)}</div>
+              <div className={styles.option}><span>Price </span>-- <span>{data?.currencyMetadata.displayValue}</span></div>
+              <div className={styles.option}><span>Start Time </span>-- {data?.startTime.toDateString()}</div>
+              <div className={styles.option}><span>Stocks Left </span>-- {data?.availableSupply}</div>
+              <div className={styles.option}><span>limit </span>-- {data?.maxClaimablePerWallet}</div>
+              <div className={styles.option}>
+                <span>issue size </span>--{" "}
+                {Number(data?.maxClaimableSupply) *
+                  Number(data?.currencyMetadata.displayValue)}
+              </div>
+              <div className={styles.button}>
+
+              <Web3Button
+                contractAddress={CompanyCollectionAddress}
+                action={() =>
+                  claimNft({
+                    to: wallet_address,
+                    quantity: 1,
+                  })
+                }
+                >
+                Claim NFT
+              </Web3Button>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      }
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -83,12 +127,8 @@ export default function TokenPage({ nft, contractMetadata }) {
           marginTop: 50,
         }}
       >
-        {/* {console.log(docum)} */}
         <Toaster position="bottom-center" reverseOrder={false} />
         <Container maxWidth="lg">
-          
-
-
           <div>
 
           <div style={{
@@ -102,7 +142,6 @@ export default function TokenPage({ nft, contractMetadata }) {
           <div>{data?.currencyMetadata.displayValue}</div>
 
           </div>
-          {/* <p>{metadata?.description}</p> */}
           <div>Start Time --- {data?.startTime.toDateString()}</div>
           <div>Stocks Left ---- {data?.availableSupply}</div>
           <div>limit -----------{data?.maxClaimablePerWallet}</div>
@@ -115,7 +154,7 @@ export default function TokenPage({ nft, contractMetadata }) {
             contractAddress={CompanyCollectionAddress}
             action={() =>
               claimNft({
-                to: wallet_address, // Use useAddress hook to get current wallet address
+                to: wallet_address,
                 quantity: 1,
               })
             }
@@ -124,7 +163,7 @@ export default function TokenPage({ nft, contractMetadata }) {
           </Web3Button>
             </div>
         </Container>
-      </div>
+      </div> */}
     </>
   );
 }
@@ -144,7 +183,7 @@ export const getStaticProps = async (context) => {
 
   try {
     contractMetadata = await contract.metadata.get();
-  } catch (e) {}
+  } catch (e) { }
 
   return {
     props: {
