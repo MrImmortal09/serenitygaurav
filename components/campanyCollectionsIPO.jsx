@@ -25,10 +25,11 @@ export default function CompanyCollection({ company }) {
                 width={"18vw"}
               />
               <div className={styles.companyName}>{company?.name}</div>
-              <div className={styles.details}>
+              <div className={styles.details} > 
+               {/* style={{background:"#00260d"}}> */}
                 <div className={styles.detail}>
-                  <span>Price</span>
-                  <span className="currentMarketPrice">0.0002 ETH</span>
+                  <span >Open</span>
+                  
                 </div>
                 <div className={styles.detail}>
                   
