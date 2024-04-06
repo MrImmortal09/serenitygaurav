@@ -23,8 +23,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       {/* Render the navigation menu above each component */}
       <Navbar />
+
       {/* Render the actual component (page) */}
       <Component {...pageProps} />
+      <div id="background">
+        {/* <video autoPlay loop muted className="background-video">
+          <source src="landing.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> */}
+      </div>
     </ThirdwebProvider>
   );
 }

@@ -15,6 +15,7 @@ import {
 import {
     MARKETPLACE_ADDRESS
 } from "../../const/contractAddresses"
+import Chart from '../../components/Charts/chart';
 
 export default function TokenPage({ nft, contractMetadata }) {
     const router = useRouter();
@@ -59,7 +60,7 @@ export default function TokenPage({ nft, contractMetadata }) {
 
     return (
         <div className={styles.TokenPage} >
-
+                <Chart/>
                 <Web3Button
                     contractAddress={MARKETPLACE_ADDRESS}
                     action={async () => buyListing()}
