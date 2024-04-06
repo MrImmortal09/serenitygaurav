@@ -22,7 +22,9 @@
     "react-dom": "^18.2",
     "react-hook-form": "^7.43.0",
     "react-hot-toast": "^2.4.0",
-    "react-ts-tradingview-widgets": "^1.2.4"
+    "react-ts-tradingview-widgets": "^1.2.4",
+    "react-vanilla-tilt": "^1.0.0",
+    "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.11",
