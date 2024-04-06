@@ -17,7 +17,7 @@ import {
 } from "../../const/contractAddresses"
 import Chart from '../../components/Charts/chart';
 
-export default function TokenPage({ nft, contractMetadata }) {
+export default function TokenPage({ nft }) {
     const router = useRouter();
     const { query } = router;
     const contractAdd = query.contractAdd;
@@ -29,9 +29,8 @@ export default function TokenPage({ nft, contractMetadata }) {
     );
     useEffect(() => {
         getListingss();
-        console.log(listings)
     }, [marketplace, listings]);
-
+    const { data: contractMetadata, isLoading } = useContractMetadata(contract);
     const getListingss = async () => {
         let listing = await marketplace?.directListings.getAllValid();
         listing = listing?.filter((listing) => listing.assetContractAddress === contractAdd);
@@ -42,6 +41,7 @@ export default function TokenPage({ nft, contractMetadata }) {
         console.log(listing)
         setListings(listing);
     }
+    console.log(contractMetadata)
     async function buyListing() {
         let txResult;
         await getCheapestToken();
@@ -60,17 +60,28 @@ export default function TokenPage({ nft, contractMetadata }) {
 
     return (
         <div className={styles.TokenPage} >
-                <Chart/>
-                <Web3Button
-                    contractAddress={MARKETPLACE_ADDRESS}
-                    action={async () => buyListing()}
-                    isDisabled={
-                        (!listings || !listings[0])
-                    }
-                >
-                    Buy Cheapest
-                </Web3Button>
-                
+            <div className={styles.outer}>
+                <div className={styles.left}>
+                    <div className={styles.Chart}>
+
+                        <Chart />
+                    </div>
+                </div>
+                <div className={styles.right}>
+                    <div className={styles.name}>{!isLoading && contractMetadata && (contractMetadata?.name)}</div>
+                    <div className={styles.des}>{!isLoading && contractMetadata && (contractMetadata?.description)}</div>
+                    <Web3Button
+                        contractAddress={MARKETPLACE_ADDRESS}
+                        action={async () => buyListing()}
+                        isDisabled={
+                            (!listings || !listings[0])
+                        }
+                    >
+                        {listings && listings[0] && "Buy Cheapest" || "Not Avaiable for sale" }
+                    </Web3Button>
+                </div>
+            </div>
+
         </div>
     );
 }
