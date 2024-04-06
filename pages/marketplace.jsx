@@ -6,7 +6,6 @@ import { useEffect,useRef } from 'react';
 import CompanyCollection from '../components/campanyCollections';
 
 export default function MarketPlace() {
-
     return (
         <div className={styles.marketplace}>
             <div className={styles.title}>MarketPlace</div>

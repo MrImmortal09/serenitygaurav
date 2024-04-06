@@ -14,7 +14,7 @@ export default function CompanyCollection({ company }) {
     }
     return (
         <Link
-            href={`/ipo/${company?.address}`}
+            href={`/token/${company?.address}`}
             key={company}
         >
             <div className={styles.companyCollection}>
