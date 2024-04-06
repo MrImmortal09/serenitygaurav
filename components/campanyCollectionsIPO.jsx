@@ -1,38 +1,44 @@
-import NFTGrid from "./NFT/NFTGrid";
+import styles from "../styles/Marketplace.module.css";
 import { useContract, useNFTs, ThirdwebNftMedia } from "@thirdweb-dev/react";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import Skeleton from "./Skeleton/Skeleton";
 export default function CompanyCollection({ company }) {
-    const { contract } = useContract(company?.address);
-    const [metadata, setMetadata] = useState(null);
-    useEffect(() => {
-        getMetaData();
-    }, [contract, metadata])
-    const getMetaData = async () => {
-        let metadata = await contract?.metadata.get();
-        setMetadata(metadata);
-    }
-    return (
-        
-        <Link 
-         href={`/ipo/${company?.address}`}
-        key={company}
-        >
-        <div className="collection">
-            <div className="collectionName">{company?.name}</div>
-            {metadata &&
-                <div className="company">
-                    <ThirdwebNftMedia
-                        metadata={metadata}
-                        height={100}
-                        width={100}
-                    />
-                    <div className="currentMarketPrice">0.0002 ETH</div>
-                    <div className="priceChange">+0.00002 (10%)</div>
+  const { contract } = useContract(company?.address);
+  const [metadata, setMetadata] = useState(null);
+  useEffect(() => {
+    getMetaData();
+  }, [contract, metadata]);
+  const getMetaData = async () => {
+    let metadata = await contract?.metadata.get();
+    setMetadata(metadata);
+  };
+  return (
+    <>
+      {(metadata && (
+        <Link href={`/ipo/${company?.address}`} key={company}>
+          <div className={styles.companyCollection}>
+            <div className={styles.company}>
+              <ThirdwebNftMedia
+                metadata={metadata}
+                height={"18vw"}
+                width={"18vw"}
+              />
+              <div className={styles.companyName}>{company?.name}</div>
+              <div className={styles.details}>
+                <div className={styles.detail}>
+                  <span>Price</span>
+                  <span className="currentMarketPrice">0.0002 ETH</span>
                 </div>
-                || <div>Loading...</div>
-            }
-        </div></Link>
+                <div className={styles.detail}>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </Link>
         
-    );
+      )) || <Skeleton width="20vw" height="27vw" borderRadius="1vw" />}
+    </>
+  );
 }
