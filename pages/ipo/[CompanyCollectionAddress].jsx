@@ -91,14 +91,14 @@ export default function TokenPage({ nft, contractMetadata }) {
             <div className={styles.right}>
               <div className={styles.name}>{!isLoading && contractMetadata && (contractMetadata?.name)}</div>
               <div className={styles.des}>{!isLoading && contractMetadata && (contractMetadata?.description)}</div>
-              <div className={styles.option}><span>Price </span>-- <span>{data?.currencyMetadata.displayValue}</span></div>
-              <div className={styles.option}><span>Start Time </span>-- {data?.startTime.toDateString()}</div>
-              <div className={styles.option}><span>Stocks Left </span>-- {data?.availableSupply}</div>
-              <div className={styles.option}><span>limit </span>-- {data?.maxClaimablePerWallet}</div>
+              <div className={styles.option}><span>Price </span> <span>{data?.currencyMetadata.displayValue}</span></div>
+              <div className={styles.option}><span>Start Time </span> <span>{data?.startTime.toDateString()}</span></div>
+              <div className={styles.option}><span>Stocks Left </span> <span>{data?.availableSupply}</span></div>
+              <div className={styles.option}><span>Limit </span> <span>{data?.maxClaimablePerWallet}</span></div>
               <div className={styles.option}>
-                <span>issue size </span>--{" "}
-                {Number(data?.maxClaimableSupply) *
-                  Number(data?.currencyMetadata.displayValue)}
+                <span>Valuation </span>{" "}
+                <span>{Number(data?.maxClaimableSupply) *
+                  Number(data?.currencyMetadata.displayValue)}</span>
               </div>
               <div className={styles.button}>
 
@@ -119,51 +119,6 @@ export default function TokenPage({ nft, contractMetadata }) {
 
         </div>
       }
-      {/* <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: 50,
-        }}
-      >
-        <Toaster position="bottom-center" reverseOrder={false} />
-        <Container maxWidth="lg">
-          <div>
-
-          <div style={{
-            display: "flex",
-            margin: "10px"
-          }}>
-            {metadata && (
-            <ThirdwebNftMedia metadata={metadata} height={100} width={100} />
-          )}
-          <h1>{metadata?.name}</h1>
-          <div>{data?.currencyMetadata.displayValue}</div>
-
-          </div>
-          <div>Start Time --- {data?.startTime.toDateString()}</div>
-          <div>Stocks Left ---- {data?.availableSupply}</div>
-          <div>limit -----------{data?.maxClaimablePerWallet}</div>
-          <div>
-            issue size --{" "}
-            {Number(data?.maxClaimableSupply) *
-              Number(data?.currencyMetadata.displayValue)}
-          </div>
-          <Web3Button
-            contractAddress={CompanyCollectionAddress}
-            action={() =>
-              claimNft({
-                to: wallet_address,
-                quantity: 1,
-              })
-            }
-            >
-            Claim NFT
-          </Web3Button>
-            </div>
-        </Container>
-      </div> */}
     </>
   );
 }

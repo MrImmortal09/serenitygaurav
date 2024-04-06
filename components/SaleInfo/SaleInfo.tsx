@@ -130,13 +130,6 @@ export default function SaleInfo({ nft , collectionAdd }: Props) {
           >
             Direct
           </h3>
-          <h3
-            className={`${profileStyles.tab} 
-        ${tab === "auction" ? profileStyles.activeTab : ""}`}
-            onClick={() => setTab("auction")}
-          >
-            Auction
-          </h3>
         </div>
 
         {/* Direct listing fields */}
@@ -196,9 +189,6 @@ export default function SaleInfo({ nft , collectionAdd }: Props) {
                 style: toastStyle,
                 position: "bottom-center",
               });
-              router.push(
-                `/token/${collectionAdd}/${nft.metadata.id}`
-              );
             }}
           >
             Create Direct Listing
