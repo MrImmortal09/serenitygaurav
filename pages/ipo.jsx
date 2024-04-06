@@ -3,7 +3,7 @@
 import { NFT_COLLECTION_ADDRESSS } from  "../const/contractAddresses";//"../consts/addresses";
 import { useContract, useNFTs } from "@thirdweb-dev/react";
 import { useEffect } from 'react';
-import CompanyCollection from  "../components/campanyCollections" ;// '../components/companyCollections';
+import CompanyCollection from  "../components/campanyCollectionsIPO" ;// '../components/companyCollections';
 
   const Ipo=()=> {
     return (
