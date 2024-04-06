@@ -30,6 +30,9 @@ export function Navbar() {
             <Link href="/ipo" className={styles.link}>
               IPO
             </Link>
+            <Link href="/sell" className={styles.link}>
+              Sell
+            </Link>
           </div>
         </div>
 
