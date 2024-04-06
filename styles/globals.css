@@ -11,6 +11,7 @@ body {
 
 html {
   color-scheme: dark;
+  height: 100%;
 }
 
 body {
@@ -23,6 +24,13 @@ body {
   --card-background: #252133;
   --highlighted-background: #202326;
   font-weight: 400;
+  /* background-image: url("https://imgs.search.brave.com/PJE3LM2CXQ5UUFdPN-qE__B_dUmqQl-YFHtnKqW3uiU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/MzcwNTUxNTk2NTIt/MmI4ODM3NzMxZjAw/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4TVRKOGZH/UmhjbXNsTWpCbmNt/RmthV1Z1ZEh4bGJu/d3dmSHd3Zkh4OE1B/PT0");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  backdrop-filter: blur(20px) brightness(0.5); */
+  background: radial-gradient(circle at top, #13052d , #1c0017);
 }
 
 h1 {

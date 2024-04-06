@@ -11,19 +11,18 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  padding: 1vw 0;
 }
 
 .nav {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 0.5vw 1.5vw;
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
   align-items: center;
   justify-content: space-between;
-  width: 98%;
-  max-width: 1260px;
-  background-color: transparent !important;
+  width: 50vw;
+  background-color: #10020c8d !important;
+  border-radius: 5vw;
+  border: 1px solid #ffffff26;
 }
 
 .navLeft {
@@ -32,6 +31,9 @@
   align-items: center;
   gap: 12px;
   transition: all 0.15s ease-in-out;
+}
+.navLeft img{
+  scale: 1.8;
 }
 
 .navMiddle {

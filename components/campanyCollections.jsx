@@ -1,5 +1,5 @@
-import NFTGrid from "./NFT/NFTGrid";
 import { useContract, useNFTs, ThirdwebNftMedia } from "@thirdweb-dev/react";
+import styles from '../styles/Marketplace.module.css';
 import { useEffect, useState } from 'react';
 import Link from "next/link";
 export default function CompanyCollection({ company }) {
@@ -13,26 +13,33 @@ export default function CompanyCollection({ company }) {
         setMetadata(metadata);
     }
     return (
-        
-        <Link 
-         href={`/ipo/${company?.address}`}
-        key={company}
+        <Link
+            href={`/ipo/${company?.address}`}
+            key={company}
         >
-        <div className="collection">
-            <div className="collectionName">{company?.name}</div>
-            {metadata &&
-                <div className="company">
-                    <ThirdwebNftMedia
-                        metadata={metadata}
-                        height={100}
-                        width={100}
-                    />
-                    <div className="currentMarketPrice">0.0002 ETH</div>
-                    <div className="priceChange">+0.00002 (10%)</div>
-                </div>
-                || <div>Loading...</div>
-            }
-        </div></Link>
-        
+            <div className={styles.companyCollection}>
+                {metadata &&
+                    <div className={styles.company}>
+                        <ThirdwebNftMedia
+                            metadata={metadata}
+                            height={"18vw"}
+                            width={"18vw"}
+                        />
+                        <div className={styles.companyName}>{company?.name}</div>
+                        <div className={styles.details}>
+                            <div className={styles.detail}>
+                                <span>Price</span>
+                                <span className="currentMarketPrice">0.0002 ETH</span>
+                            </div>
+                            <div className={styles.detail}>
+                                <span>Change</span>
+                                <span>+0.00002 (10%)</span>
+                            </div>
+                        </div>
+                    </div>
+                    || <div>Loading...</div>
+                }
+            </div></Link>
+
     );
 }

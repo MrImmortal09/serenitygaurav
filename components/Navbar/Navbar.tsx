@@ -24,11 +24,11 @@ export function Navbar() {
           </Link>
 
           <div className={styles.navMiddle}>
-            <Link href="/buy" className={styles.link}>
-              Buy
+            <Link href="/marketplace" className={styles.link}>
+              Marketplace
             </Link>
-            <Link href="/sell" className={styles.link}>
-              Sell
+            <Link href="/ipo" className={styles.link}>
+              IPO
             </Link>
           </div>
         </div>

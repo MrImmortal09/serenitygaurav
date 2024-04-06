@@ -1,0 +1,68 @@
+.marketplace {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100%;
+    margin: auto;
+    margin-top: 8vw;
+}
+
+.marketplace .title {
+    font-size: 1.5vw;
+}
+
+.marketplace .companyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding-top: 2vw;
+}
+
+.marketplace .companyCollection {
+    width: 20vw;
+    height: 27vw;
+    border-radius: 10px;
+
+}
+
+.marketplace .companyCollection .company {
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+    background: linear-gradient(160deg,transparent,#a9a9a934) ;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 1vw;
+}
+
+.marketplace .companyCollection img {
+    /* background: #420821; */
+    padding: 0 1vw;
+    border-radius: 10px;
+    margin: auto;
+}
+.companyCollection .companyName{
+    font-size: 1vw;
+}
+.companyCollection .details{
+    background-color: #7e7e7e3d;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 1vw;
+    padding: 0.8vw;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.companyCollection .details .detail{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3vw 0;
+    gap: 6px;
+    font-size: 0.8vw;
+}
+.companyCollection .details .detail span:first-child{
+    opacity: 0.6;
+}
