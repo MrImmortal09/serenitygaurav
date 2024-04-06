@@ -4,12 +4,14 @@
 .coverImage {
   width: 100%;
   background-color: #272a2d;
-  height: 300px;
+  height: 200px;
   border-radius: 16px;
 }
 
 .profilePicture {
   width: 132px;
+  background-image: url(../public/useravatartrans.png);
+  background-size: cover;
   height: 132px;
   border-radius: 132px;
   vertical-align: inherit;

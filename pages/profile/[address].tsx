@@ -17,6 +17,7 @@ import {
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
 
+
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
   randomColor(),
@@ -56,13 +57,13 @@ export default function ProfilePage() {
         <div
           className={styles.coverImage}
           style={{
-            background: `linear-gradient(90deg, ${randomColor1}, ${randomColor2})`,
+            background: `transparent`,
           }}
         />
         <div
           className={styles.profilePicture}
           style={{
-            background: `linear-gradient(90deg, ${randomColor3}, ${randomColor4})`,
+            
           }}
         />
         <h1 className={styles.profileName}>
