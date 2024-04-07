@@ -25,7 +25,7 @@ To utilize Project Serenity, follow these simple steps:
 1. Install dependencies using npm:
 
 ```bash
-npm install i
+npm i --legacy-peer-deps
 ```
 
 2. Set up your environment files:
