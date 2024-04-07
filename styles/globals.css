@@ -26,6 +26,15 @@ body {
   font-weight: 400;
   /* background: radial-gradient(circle at top, #13052d , #1c0017); */
 }
+#pointerCircle {
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  position: absolute;
+  z-index: 999;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+}
 
 h1 {
   font-size: 2rem;
@@ -50,7 +59,7 @@ a {
   top:0;
   z-index: -1;
   width: 100%;
-  background: url("../public/landing1repeat_2..png");
+  background: url("../public/landing1repeat_2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -5,8 +5,8 @@ import {
   useOwnedNFTs,
 } from "@thirdweb-dev/react";
 import React, { useState } from "react";
-import Container from "../components/Container/Container";
-import NFTGrid from "../components/NFT/NFTGrid";
+import Container from "./Container/Container";
+import NFTGrid from "./NFT/NFTGrid";
 import tokenPageStyles from "../styles/Sell.module.css";
 
 import SaleInfo from "./SaleInfo/SaleInfo";
