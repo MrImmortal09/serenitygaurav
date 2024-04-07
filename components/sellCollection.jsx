@@ -33,7 +33,7 @@ export default function SellCollection({ NFT_COLLECTION_ADDRESS }) {
           }
         </>
       ) : (
-        <div className={tokenPageStyles.container}>
+        <div className={tokenPageStyles.container} style={{display:'flex'}}>
           <div className={tokenPageStyles.metadataContainer}>
             <div className={tokenPageStyles.imageContainer}>
               <ThirdwebNftMedia
@@ -59,7 +59,7 @@ export default function SellCollection({ NFT_COLLECTION_ADDRESS }) {
               Token ID #{selectedNft.metadata.id}
             </p>
 
-            <div className={tokenPageStyles.pricingContainer}>
+            <div className={tokenPageStyles.pricingContainer} >
               <SaleInfo nft={selectedNft} collectionAdd={NFT_COLLECTION_ADDRESS} />
             </div>
           </div>
