@@ -14,12 +14,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         const circle = document.querySelector<HTMLElement>("#pointerCircle"); // Specify type as HTMLElement
     
         if (circle) {
-          // Calculate the position of the circle based on mouse cursor position
-          const x = event.clientX;
-          const y = event.clientY;
+          // Calculate the position of the circle based on mouse cursor position relative to viewport
+          const x = (event.clientX / window.innerWidth) * 100; // Calculate percentage of viewport width
+          const y = (event.clientY / window.innerHeight) * 100; // Calculate percentage of viewport height
     
           // Update the circle's position using CSS transform
-          circle.style.transform = `translate(${x-10}px, ${y-155}px)`;
+          circle.style.left = `${x}%`;
+          circle.style.top = `${y}%`;
         }
       });
     }
