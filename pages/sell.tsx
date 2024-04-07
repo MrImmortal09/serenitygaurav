@@ -13,8 +13,8 @@ export default function Sell() {
 
   return (
     <div className={styles.outer}>
-    <h1>Sell NFTs</h1>
-    <p>Select which NFT you&rsquo;d like to sell below.</p>
+    <h1>Select Stock(s) to Sell</h1>
+    {/* <p>Select which NFT you&rsquo;d like to sell below.</p> */}
     <div className={styles.nftContainer}>
 
       {NFT_COLLECTION_ADDRESSS.map((address)=>
